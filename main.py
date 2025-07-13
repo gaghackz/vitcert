@@ -14,13 +14,13 @@ def generate_certificate(name: str):
 
     name = urllib.parse.unquote(name)
     
-    # Correct text size calculation
+    
     bbox = font.getbbox(name)
     text_width = bbox[2] - bbox[0]
     text_height = bbox[3] - bbox[1]
 
     x = (base_image.width - text_width) // 2 -300
-    y = 670  # adjust to your certificate layout
+    y = 670  
 
     draw.text((x, y), name, font=font, fill="black")
 
